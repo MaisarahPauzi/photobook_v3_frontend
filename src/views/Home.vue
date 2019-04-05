@@ -1,20 +1,16 @@
 <template>  
-<v-container>
+<v-parallax
+    dark
+    src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+  >
     <v-layout
-      text-xs-center
-      wrap
+      align-center
+      column
+      justify-center
     >
-      {{newstring}}
+      <h1 class="display-2 font-weight-thin mb-3">Welcome</h1>
+      <h4 class="subheading">This is the Vue JS template that consume API built using Laravel</h4>
     </v-layout>
-  </v-container>
-</template>
-<script>
-export default {
-  computed: {
-    newstring () {
-	    return this.$store.state.newstring
-    }
-  }
+  </v-parallax>
   
-}
-</script>
+</template>

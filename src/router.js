@@ -5,6 +5,8 @@ import Login from './views/Login.vue'
 import Register from './views/Register.vue'
 import Details from './views/Details.vue'
 import Products from './views/Products.vue'
+import Photobook from './views/Photobook.vue'
+import Upload from './views/Upload.vue'
 import store from './store'
 Vue.use(Router)
 
@@ -37,6 +39,22 @@ let router = new Router({
       path: '/products',
       name: 'products',
       component: Products,
+      meta: {
+        requiresAuth: true
+       }
+    },
+    {
+      path: '/photobook',
+      name: 'photobook',
+      component: Photobook,
+      meta: {
+        requiresAuth: true
+       }
+    },
+    {
+      path: '/upload',
+      name: 'upload',
+      component: Upload,
       meta: {
         requiresAuth: true
        }

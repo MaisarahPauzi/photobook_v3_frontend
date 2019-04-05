@@ -20,7 +20,8 @@
                 </v-card-title>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="primary" @click="goTo()">See Product</v-btn>
+                <v-btn color="primary" to="/products">Product</v-btn>
+                <v-btn color="primary" to="/photobook">Photobook</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
@@ -48,11 +49,6 @@ import axios from 'axios';
     computed: {
       loginToken () {
         return this.$store.state.loginToken
-      }
-    },
-    methods:{
-      goTo(){
-        this.$router.push('products');
       }
     },
     created(){
